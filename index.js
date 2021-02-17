@@ -107,9 +107,34 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
-  }
+
+function hungryDog(weight, age){
+    let isAdult = age >= 1;
+    let percentage;
+    if (isAdult) {
+      if (weight <= 5) {
+        percentage = 0.05
+      } else if (weight <= 10) {
+        percentage = 0.04
+      } else if (weight <= 15) {
+        percentage = 0.03
+      } else {
+        percentage = 0.02
+      }
+      return  weight * percentage;
+    }
+  
+      if (age <= 0.33) {
+        return weight * 0.10;
+      } else if (age <= 0.58) {
+        return weight * 0.05;
+      } else {
+        return weight * 0.04;
+      }
+    }
+  // figure if its a dog or puppy
+  // determine which formula to use
+  // return the result of using formula
 
 
 

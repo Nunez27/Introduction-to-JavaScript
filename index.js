@@ -14,10 +14,12 @@ Task 1a - Voting Age
 Do the following:   
    1. Create a variable called votingAge and assign it a value
    2. Console log true if age is 18 or higher
-
    HINT: no function required
 */
-
+  const votingAge = 18;
+  if(votingAge >= 18) {
+    console.log(`This is true!`)
+  }
 
 
 /*
@@ -30,8 +32,14 @@ Do the following:
 
    HINT: no function required
 */
+  let myName = `Brian`
+  let favFood = `pizza`
 
+  if(favFood === `pizza`){
+    myName = `Michael`
+  }
 
+  console.log(myName);
 
 
 
@@ -45,8 +53,10 @@ Do the following:
 
    HINT: look up the Number method
 */
+  let myString = `1999`
+parseInt(myString);
 
-
+console.log(myString)
 
 
 /*
@@ -58,8 +68,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a * b;
   }
 
 
@@ -74,8 +84,8 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age * 7
 }
 
 
@@ -155,7 +165,7 @@ function game(user, computer){
       return `you lose!`
     }
 }
-  
+
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/

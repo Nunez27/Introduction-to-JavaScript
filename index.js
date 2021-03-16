@@ -117,9 +117,30 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age){
+  let isAdult = age >= 1;
+  let percentage = 0;
+  if (isAdult) {
+    if (weight <= 5) {
+      percentage = 0.05
+    } else if (weight <= 10) {
+      percentage = 0.04
+    } else if (weight <= 15) {
+      percentage = 0.03
+    } else {
+      percentage = 0.02
+    }
+    return  weight * percentage;
   }
+    if (age <= 0.33) {
+      return weight * 0.10;
+    } else if (age <= 0.58) {
+      return weight * 0.05;
+    } else {
+      return weight * 0.04;
+    }
+  }
+
 
 
 
@@ -175,13 +196,16 @@ function game(user, computer){
 /*
 Using the miles function below do the following:
   1. Receive a number of kilometers
-  2. Convert the number of kiolmeters received to miles
+  2. Convert the number of kilometers received to miles
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(numKilo){
+    let kilometers = numKilo
+    let conversion = 0.621371
+    return kilometers * conversion
   }
+
 
 
 
@@ -193,8 +217,10 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(numCm){
+    let centimeters = numCm
+    let feet = 30.48
+    return centimeters / feet
   }
  
 
@@ -209,8 +235,10 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(number){
+    for (let i = number; i < number; i--){
+      return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number} bottles of soda on the wall`
+    }
   }
 
 
@@ -229,8 +257,20 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
+function grade(score){
   /*Your Code here */
+   
+  if(score >= 90 && score <= 100){
+    return `you got an A`;
+  } else if(score >= 80 && score <= 89){
+    return `you got a B`;
+  }else if(score >= 70 && score <=79){
+    return `you got a C`;
+  }else if(score >= 60 && score <=69){
+    return `you got a D`;
+  }else{
+    return `you got an F`;
+  }
   }
   
   

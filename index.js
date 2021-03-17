@@ -236,11 +236,11 @@ Using the annoyingSong function below do the following:
 */
 
 function annoyingSong(number){
-    for (let i = number; i < number; i--){
-      return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number} bottles of soda on the wall`
+    for (let i = number; i >= 0; i--) {
+      return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number - 1} bottles of soda on the wall`
     }
   }
-
+// console.log(annoyingSong(10));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -264,9 +264,9 @@ function grade(score){
     return `you got an A`;
   } else if(score >= 80 && score <= 89){
     return `you got a B`;
-  }else if(score >= 70 && score <=79){
+  }else if(score >= 70 && score <= 79){
     return `you got a C`;
-  }else if(score >= 60 && score <=69){
+  }else if(score >= 60 && score <= 69){
     return `you got a D`;
   }else{
     return `you got an F`;
